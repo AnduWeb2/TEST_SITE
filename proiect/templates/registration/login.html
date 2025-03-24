@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Login
+{% endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %} {{form|crispy}}
+        <p>Nu ai un cont? Fa-ti unul <a href="/sign-up">aici</a>!</p>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+{% endblock content %}

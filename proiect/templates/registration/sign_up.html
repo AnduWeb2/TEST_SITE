@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Sing Up
+{% endblock title %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %} {{form|crispy}}
+        <p>Ai un cont? Conecteaza-te <a href="/login">aici</a>!</p>
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock content %}
